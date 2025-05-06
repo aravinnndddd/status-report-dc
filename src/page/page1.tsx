@@ -86,18 +86,18 @@ const Page: React.FC = () => {
 
   return (
     <div className="bg-black h-[100vh] flex items-center justify-center">
-      <div className="bg-white/20 w-[300px] md:w-[600px] h-[90vh] md:h-[500px] rounded-lg shadow-lg flex flex-col items-center justify-center">
-        <div className="flex flex-col items-center justify-center">
-          <h1 className="font-bold text-2xl text-white mt-10 mb-5 flex items-center gap-2">
-            My Discord Status
+      <div className="bg-white/20 w-[350px] md:w-[600px] justify-center h-[70vh] md:h-[500px] rounded-lg shadow-lg flex flex-col ">
+        <div className="flex flex-col mt-1 items-center justify-center">
+          <h1 className="font-bold text-2xl text-white mt-1 md:mt-5 md:mb-5 flex items-center gap-2">
+            Discord Status
             
           </h1>
 
           <div
-            className={`${getStatusColor(data.discord_status)} relative rounded-full inline-block p-[6px]`}
+            className={`${getStatusColor(data.discord_status)} relative rounded-full inline-block p-[4px]`}
           >
             <img
-              className="w-[96px] h-[96px] rounded-full"
+              className="md:w-[96px] md:h-[96px] w-[76px] h-[76px] rounded-full"
               src={avatarURL}
               alt="User Avatar"
             />
@@ -120,9 +120,9 @@ const Page: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-5 justify-center mt-5">
+        <div className="flex flex-col md:flex-row items-center gap-3 justify-center ">
           {/* VS Code Activity */}
-          <div className="flex flex-col bg-white/20 p-3 rounded-3xl drop-shadow-2xl hover:shadow-2xl transition-all duration-500 ease-in items-center justify-center w-[250px]   text-white">
+          <div className=" text-[12px] flex flex-col bg-white/20 p-3 rounded-3xl drop-shadow-2xl hover:shadow-2xl transition-all duration-500 ease-in items-center justify-center w-[250px]   text-white">
             {vsCodeActivity ? (
               <>
                 <p className="text-center font-semibold">VS Code</p>
@@ -130,7 +130,7 @@ const Page: React.FC = () => {
                 <p>{vsCodeActivity.state}</p>
 
                 {vsCodeActivity.assets?.large_image && (
-                  <img src={cleanedURL} width="80px" alt="Activity Image" />
+                  <img src={cleanedURL} className="md:w-[80px] w-[50px]" alt="Activity Image" />
                 
                 )}
                 </>
@@ -141,15 +141,15 @@ const Page: React.FC = () => {
           </div>
 
           {/* Spotify */}
-          <div className="flex flex-col items-center bg-white/20 p-3 rounded-3xl drop-shadow-2xl hover:shadow-2xl transition-all duration-500 ease-in w-[250px]  justify-center text-white">
+          <div className=" text-[12px] flex flex-col items-center bg-white/20 p-3 rounded-3xl drop-shadow-2xl hover:shadow-2xl transition-all duration-500 ease-in w-[250px]  justify-center text-white">
             {data.spotify?.track_id ? (
               <>
                 <p className="text-center font-semibold">Spotify</p>
-                <p>{data.spotify.song}</p>
+                <p className="">{data.spotify.song}</p>
                 <p>by {data.spotify.artist}</p>
                 <img
                   src={data.spotify.album_art_url}
-                  width="80px"
+                  className="w-[50px] md:w-[80px]"
                   alt="Album Art"
                 />
               </>
