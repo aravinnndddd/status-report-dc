@@ -1,146 +1,4 @@
-/* app.module.css */
 
-.container {
-  max-width: 4xl;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 16px;
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 24px;
-  margin-bottom: 24px;
-}
-
-.headerTitle {
-  font-size: 24px;
-  font-weight: 600;
-}
-
-.gridWrapper {
-  display: grid;
-  grid-template-columns: repeat(10, 1fr);
-  gap: 24px;
-}
-
-.avatarWrapper {
-  position: relative;
-  display: inline-block;
-  border-radius: 9999px;
-  padding: 4px;
-}
-
-.avatarImage {
-  width: 96px;
-  height: 96px;
-  border-radius: 9999px;
-}
-
-.textWrapper {
-  grid-column: span 6;
-}
-
-.textTitle {
-  font-size: 24px;
-}
-
-.textSubtitle {
-  color: #9CA3AF; /* Gray 400 */
-}
-
-.textBody {
-  color: #6B7280; /* Gray 500 */
-}
-
-.spinnerWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.spinner {
-  border-top: 4px solid #3B82F6; /* Blue 500 */
-  border-radius: 50%;
-  width: 96px;
-  height: 96px;
-  animation: spin 1s infinite linear;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-/* app.module.css */
-.container {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #1e1e2f;
-  color: #ffffff;
-  min-height: 100vh;
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-}
-
-.header {
-  margin-bottom: 2rem;
-}
-
-.headerTitle {
-  font-size: 2rem;
-  color: #ffffff;
-  text-shadow: 0 0 10px rgba(0, 153, 255, 0.6);
-  border-bottom: 2px solid #00b0ff;
-  padding-bottom: 0.5rem;
-}
-
-.gridWrapper {
-  display: flex;
-  gap: 2rem;
-  background: #2e2e3e;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-  width: 100%;
-  max-width: 600px;
-}
-
-
-
-
-.textWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-}
-
-.textTitle {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.textSubtitle {
-  font-size: 1rem;
-  color: #ccc;
-  margin-left: 0.5rem;
-}
-
-.textBody {
-  font-size: 1rem;
-  margin: 0.25rem 0;
-  color: #ddd;
-}
 
 .spinnerWrapper {
   display: flex;
@@ -159,7 +17,17 @@
   animation: spin 1s linear infinite;
 }
 
+.online {
+  color: green;
+}
 
+.dnd {
+  color: red;
+}
+
+.idle {
+  color: yellow;
+}
 @keyframes spin {
   0% {
     transform: rotate(0deg);

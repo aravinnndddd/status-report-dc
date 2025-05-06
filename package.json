@@ -35,5 +35,18 @@
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.30.1",
     "vite": "^6.3.5"
-  }
+  },
+  "description": "discord status",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aravinnndddd/status-report-dc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aravinnndddd/status-report-dc/issues"
+  },
+  "homepage": "https://github.com/aravinnndddd/status-report-dc#readme"
 }
