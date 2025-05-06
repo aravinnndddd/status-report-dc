@@ -86,7 +86,7 @@ const Page: React.FC = () => {
 
   return (
     <div className="bg-black h-[100vh] flex items-center justify-center">
-      <div className="bg-white/20 w-[400px] h-[500px] rounded-lg shadow-lg flex flex-col items-center justify-center">
+      <div className="bg-white/20 w-[600px] h-[500px] rounded-lg shadow-lg flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center">
           <h1 className="font-bold text-2xl text-white mt-10 mb-5 flex items-center gap-2">
             My Discord Status
