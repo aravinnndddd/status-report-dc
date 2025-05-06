@@ -1,7 +1,7 @@
-import React, { act, useEffect, useState } from "react";
-import axios from "axios";
+import React, { useEffect, useState } from "react";
+
 import styles from "./app.module.css"; // Import the CSS module
-import { data } from "framer-motion/client";
+
 
 interface Resp {
 	discord_status: 'online' | 'dnd' | 'idle';
