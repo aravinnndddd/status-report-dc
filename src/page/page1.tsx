@@ -1,6 +1,5 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./app.module.css"; // CSS module import
-
 
 interface Resp {
   discord_status: "online" | "dnd" | "idle";
@@ -47,7 +46,7 @@ const Page: React.FC = () => {
     };
 
     fetchData(); // fetch immediately
-    const interval = setInterval(fetchData, 500); 
+    const interval = setInterval(fetchData, 500);
 
     return () => clearInterval(interval); // cleanup
   }, []);
@@ -90,11 +89,12 @@ const Page: React.FC = () => {
         <div className="flex flex-col mt-1 items-center justify-center">
           <h1 className="font-bold text-2xl text-white mt-1 md:mt-5 md:mb-5 flex items-center gap-2">
             Discord Status
-            
           </h1>
 
           <div
-            className={`${getStatusColor(data.discord_status)} relative rounded-full inline-block p-[4px]`}
+            className={`${getStatusColor(
+              data.discord_status
+            )} relative rounded-full inline-block p-[4px]`}
           >
             <img
               className="md:w-[96px] md:h-[96px] w-[76px] h-[76px] rounded-full"
@@ -106,11 +106,9 @@ const Page: React.FC = () => {
           <div className="text-white text-center mt-2">
             <p>
               {data.discord_user.username}
-              <span className="text-sm text-gray-300">
-                #4999
-              </span>
+              <span className="text-sm text-gray-300">#4999</span>
             </p>
-            <p className={styles[data.discord_status] + " font-semibold"}>
+            <p className={styles[data.discord_status] + " font-semibold mb-10"}>
               {data.discord_status === "online"
                 ? "Online"
                 : data.discord_status === "dnd"
@@ -125,33 +123,48 @@ const Page: React.FC = () => {
           <div className=" text-[12px] flex flex-col bg-white/20 p-3 rounded-3xl drop-shadow-2xl hover:shadow-2xl transition-all duration-500 ease-in items-center justify-center w-[250px]   text-white">
             {vsCodeActivity ? (
               <>
-                <p className="text-center font-semibold">VS Code</p>
-                <p className="text-sm">{vsCodeActivity.details}</p>
-                <p>{vsCodeActivity.state}</p>
+                <p className="text-center font-extrabold">VS Code</p>
 
-                {vsCodeActivity.assets?.large_image && (
-                  <img src={cleanedURL} className="md:w-[80px] w-[50px]" alt="Activity Image" />
-                
-                )}
-                </>
-                ): (
-                  <p>huh?!</p>
-                )}
-             
+                <div className="flex items-center gap-2">
+                  {vsCodeActivity.assets?.large_image && (
+                    <img
+                      src={cleanedURL}
+                      className="md:w-[80px] w-[50px]"
+                      alt="Activity Image"
+                    />
+                  )}
+                  <div>
+                    <p className="text-sm">{vsCodeActivity.details}</p>
+                    <p className="text-black font-bold">
+                      {vsCodeActivity.state}
+                    </p>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <p>huh?!</p>
+            )}
           </div>
 
           {/* Spotify */}
           <div className=" text-[12px] flex flex-col items-center bg-white/20 p-3 rounded-3xl drop-shadow-2xl hover:shadow-2xl transition-all duration-500 ease-in w-[250px]  justify-center text-white">
             {data.spotify?.track_id ? (
+              
               <>
-                <p className="text-center font-semibold">Spotify</p>
-                <p className="">{data.spotify.song}</p>
-                <p>by {data.spotify.artist}</p>
-                <img
-                  src={data.spotify.album_art_url}
-                  className="w-[50px] md:w-[80px]"
-                  alt="Album Art"
-                />
+                  <p className="text-center font-semibold">Spotify</p>
+                <div className="flex items-center gap-2">
+              
+                  <img
+                    src={data.spotify.album_art_url}
+                    className="w-[50px] md:w-[80px] "
+                    alt="Album Art"
+                  />
+                  
+                  <div>
+                    <p className="text-[12px]">{data.spotify.song}</p>
+                    <p className="text-[10px] text-black font-bold md:text-[12px]">by {data.spotify.artist}</p>
+                  </div>
+                </div>
               </>
             ) : (
               <p>Hmm!</p>
