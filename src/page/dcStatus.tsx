@@ -83,9 +83,9 @@ const DcStatus: React.FC = () => {
     : undefined;
 
   return (
-    <div className="bg-black h-[100vh] flex items-center justify-center">
-      <div className="bg-white/10 w-[350px] md:w-[600px] justify-center h-[70vh] md:h-[500px] rounded-lg shadow-lg flex flex-col ">
-        <div className="flex flex-col mt-1 items-center justify-center">
+    <div className="h-[70vh] flex  ">
+      <div className="w-[350px] md:w-[600px]  h-[70vh] md:h-[500px] rounded-lg shadow-lg flex flex-col ">
+        <div className="flex flex-col mt-5 items-center justify-center">
          
 
           <div
@@ -105,7 +105,7 @@ const DcStatus: React.FC = () => {
               {data.discord_user.username}
               <span className="text-sm text-gray-300">#4999</span>
             </p>
-            <p className={styles[data.discord_status] + " font-semibold mb-10"}>
+            <p className={styles[data.discord_status] + " font-semibold mb-2"}>
               {data.discord_status === "online"
                 ? "Online"
                 : data.discord_status === "dnd"
