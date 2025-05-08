@@ -1,5 +1,5 @@
 
-import Page from './page/page1.tsx'
+import Page from './page/dcStatus.tsx'
 
 export const App = () => {
   return (
