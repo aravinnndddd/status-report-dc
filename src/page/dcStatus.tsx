@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "./app.module.css"; // CSS module import
-
+import styles from "./app.module.css";
 interface Resp {
   discord_status: "online" | "dnd" | "idle";
   username: string;
