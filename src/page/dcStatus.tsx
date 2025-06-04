@@ -139,7 +139,7 @@ const DcStatus: React.FC = () => {
                 </div>
               </>
             ) : (
-              <p>huh?!</p>
+              <p>{'console.log("life");'}</p>
             )}
           </div>
 
@@ -164,7 +164,7 @@ const DcStatus: React.FC = () => {
                 </div>
               </>
             ) : (
-              <p>Hmm!</p>
+              <p>404:Motivation not found</p>
             )}
           </div>
         </div>
