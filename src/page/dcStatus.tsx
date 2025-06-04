@@ -164,7 +164,7 @@ const DcStatus: React.FC = () => {
                 </div>
               </>
             ) : (
-              <p>404:Motivation not found</p>
+              <p>404: Motivation not found</p>
             )}
           </div>
         </div>
