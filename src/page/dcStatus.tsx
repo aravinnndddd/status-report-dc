@@ -110,7 +110,7 @@ const DcStatus: React.FC = () => {
                 ? "Online"
                 : data.discord_status === "dnd"
                 ? "Do Not Disturb"
-                : "Idle"}
+                : "Offline"}
             </p>
           </div>
         </div>
